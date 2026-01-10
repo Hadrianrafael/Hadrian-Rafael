@@ -102,6 +102,7 @@ a:hover {
   gap:12px;
   justify-content:center;
   flex-wrap:wrap;
+  color: #eef4ff;
 }
 .btn{
   display:inline-block;
