@@ -28,16 +28,13 @@ body{
 }
 
 /* card */
-.card{
-  width:100%;
-  max-width:980px;
-  text-align:center;
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-  border-radius:16px;
-  padding:28px 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.06);
+.container {
+  background: linear-gradient(135deg, #0a2a66, #0f4ccf);
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
 /* photo */
@@ -58,10 +55,6 @@ body{
   letter-spacing:0.6px;
 }
 .contact{
-  margin:0 0 18px;
-  opacity:0.95;
-  font-size:14px;
-}
 a {
   color: #000000; /* preto */
   text-decoration: none;
@@ -71,6 +64,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 
 
 /* sections */
