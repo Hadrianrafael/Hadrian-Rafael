@@ -1,83 +1,202 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfólio — Hadrian Rafael</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio — Hadrian Rafael</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <main class="wrap">
-    <article class="card">
-      <img src="photo.png" alt="Foto de Hadrian Rafael" class="photo" />
-      <h1 class="name">HADRIAN RAFAEL SILVA DE OLIVEIRA</h1>
+    <div class="bg-gradient"></div>
 
-      <p class="contact">
-        Suzano - São Paulo - Brasil &nbsp;|&nbsp; (11) 9 1652-8370 &nbsp;|&nbsp;
-        <a href="mailto:hadrianrafael82@gmail.com">hadrianrafael82@gmail.com</a>
-      </p>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <span class="logo">HR</span>
+            <nav class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#formacao">Formação</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
 
-      <section class="section">
-        <h2>OBJETIVO</h2>
-        <p>Buscando a primeira oportunidade formal na área de TI (Suporte Técnico, Auxiliar de TI ou Desenvolvedor Júnior). Focado em utilizar sólidos conhecimentos em Hardware, Redes e Programação (Python/JS) para suporte à infraestrutura e desenvolvimento de sistemas.</p>
-      </section>
+    <main class="container">
+        <!-- HERO -->
+        <section class="hero" id="sobre">
+            <div class="hero-text">
+                <p class="hero-tag">Suporte Técnico • Auxiliar de TI • Dev Júnior</p>
+                <h1>Hadrian Rafael<br /><span>Silva de Oliveira</span></h1>
+                <p className="hero-location">
+                    Suzano - São Paulo - Brasil · (11) 9 1652-8370 ·
+                    <a href="mailto:hadrianrafael82@gmail.com">hadrianrafael82@gmail.com</a>
+                </p>
+                <p class="hero-description">
+                    Buscando a primeira oportunidade formal na área de TI, aplicando conhecimentos em
+                    <strong>hardware</strong>, <strong>redes</strong> e <strong>programação (Python/JS)</strong>
+                    para dar suporte à infraestrutura e participar do desenvolvimento de soluções.
+                </p>
 
-      <section class="section">
-        <h2>FORMAÇÃO ACADÊMICA</h2>
-        <p>Bacharelado em Análise e Desenvolvimento de Sistemas – Anhanguera Polo Suzano | Andamento (previsão de término 06/2026)</p>
-      </section>
+                <div class="hero-actions">
+                    <a href="#contato" class="btn btn-primary">Falar comigo</a>
+                    <a href="Hadrian Rafael.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+                        Baixar CV em PDF
+                    </a>
+                </div>
 
-      <section class="section">
-        <h2>EXPERIÊNCIA PROFISSIONAL</h2>
-        <p><strong>CAIXA ECONÔMICA FEDERAL</strong> — Assistente Administrativo Bancário (Aprendiz) | 02/2022 – 12/2022<br>
-        • Suporte administrativo a clientes PJ, organização de documentos e uso de sistemas bancários.</p>
-      </section>
-      
-     <section class="section">
-        <p><strong>NUBIA FESTAS LTDA</strong> — Analista de Customer Success e E‑commerce | Fev/2024 – Set/2024<br>
-        • Gestão de suporte ao cliente via chat e e‑mail; operação de plataformas e‑commerce.</p>
-       </section>
+                <div class="hero-links">
+                    <a href="https://www.linkedin.com/in/hadrianrafael/" target="_blank" rel="noopener">LinkedIn</a>
+                    <span>·</span>
+                    <a href="https://hadrianrafael.github.io/Hadrian-Rafael/" target="_blank" rel="noopener">GitHub Pages</a>
+                </div>
+            </div>
 
-      <section class="section">
-         <p><strong>KONECTA BRAZIL OUTSOURCING LTDA</strong> — Consultor de Vendas (Vivo Fibra) | Nov/2024 – Dez/2025<br>
-        • Atendimento ao cliente focado na comercialização de serviços de internet via fibra óptica.<br>
-        • Explicação técnica sobre benefícios da tecnologia de fibra, velocidade e infraestrutura de rede.<br>
-        • Uso diário de sistemas de CRM, triagem de dados e metas de retenção.</p>
-      </section>
-      
-      <section class="section">
-        <p><strong>LOJA PROPRIA (PERFUMARIA)</strong> — Empreendedor e Administrador de E‑commerce | 2024 – Atual<br>
-        • Desenvolvimento do site de vendas e manutenção da infraestrutura de hardware e redes da operação.<br>
-        • Aplicação prática de HTML/CSS e gestão de banco de dados simples.</p>
-     </section>
+            <div class="hero-photo-card">
+                <!-- Troque o src pela sua foto real (ex: foto.jpg no repositório) -->
+                <div class="photo-wrapper">
+                    <img src="minha-foto.jpg" alt="Foto de Hadrian Rafael" />
+                </div>
+                <p class="photo-caption">Tecnologia, aprendizado contínuo e foco em resultados.</p>
+            </div>
+        </section>
 
-      <section class="section">
-        <h2>COMPETÊNCIAS TÉCNICAS</h2>
-        <ul>
-          <li>Infraestrutura & Hardware: montagem e manutenção de desktops, notebooks e celulares; instalação/configuração Windows e Linux.</li>
-          <li>Redes: cabeamento, estruturação e diagnóstico de conexão.</li>
-          <li>Desenvolvimento: Python (backend), JavaScript, Java, C++ e HTML/CSS.</li>
-          <li>Cloud & Sistemas: Microsoft 365, Active Directory, Windows Server; curso preparatório AZ-204 (início Jan/2026).</li>
-          <li>Bancos de Dados & IA: SQL (Fundação Bradesco) e conceitos de Inteligência Artificial.</li>
-        </ul>
-      </section>
+        <!-- FORMAÇÃO -->
+        <section class="section" id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <div class="card">
+                <h3>Bacharelado em Análise e Desenvolvimento de Sistemas</h3>
+                <p class="card-subtitle">Anhanguera Polo Suzano · Andamento · Previsão de término: 06/2026</p>
+                <p>
+                    Após o término da graduação, iniciará uma
+                    <strong>Pós-Graduação em Engenharia de Software</strong>, com foco em qualidade de código,
+                    arquitetura de sistemas e boas práticas de desenvolvimento.
+                </p>
+            </div>
+        </section>
 
-      <section class="section">
-        <h2>IDIOMAS</h2>
-        <p>Inglês: Nível Intermediário (Instituição: Macrobyte)</p>
-      </section>
+        <!-- EXPERIÊNCIA -->
+        <section class="section" id="experiencia">
+            <h2>Experiência Profissional</h2>
 
-      <div class="links">
-        <a class="btn" href="Hadrian Rafael.pdf" download>Baixar meu PDF (Currículo)</a>
-          </section>
-        
-        <a class="btn outline" href="https://www.linkedin.com/in/hadrianrafael/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+            <div class="timeline">
+                <article class="card timeline-item">
+                    <div class="timeline-header">
+                        <h3>Empreendedor &amp; Administrador de E-commerce</h3>
+                        <span class="timeline-company">Loja Própria (Perfumaria) · 2024 – Atual</span>
+                    </div>
+                    <ul>
+                        <li>Desenvolvimento do site de vendas e manutenção da infraestrutura de hardware e redes.</li>
+                        <li>Aplicação prática de HTML/CSS e gestão de banco de dados simples.</li>
+                    </ul>
+                </article>
 
-      <footer class="footer">
-        <small></small>
-      </footer>
-    </article>
-  </main>
+                <article class="card timeline-item">
+                    <div class="timeline-header">
+                        <h3>Consultor de Vendas (Vivo Fibra)</h3>
+                        <span class="timeline-company">Konecta Brazil Outsourcing LTDA · Nov/2024 – Dez/2025</span>
+                    </div>
+                    <ul>
+                        <li>Atendimento ao cliente focado na comercialização de serviços de internet via fibra óptica.</li>
+                        <li>Explicação técnica de benefícios de velocidade, estabilidade e infraestrutura de rede.</li>
+                        <li>Uso diário de sistemas de CRM, triagem de dados e metas de retenção.</li>
+                    </ul>
+                </article>
+
+                <article class="card timeline-item">
+                    <div class="timeline-header">
+                        <h3>Analista de Customer Success &amp; E-commerce</h3>
+                        <span class="timeline-company">Nubia Festas LTDA · Fev/2024 – Set/2024</span>
+                    </div>
+                    <ul>
+                        <li>Gestão de suporte ao cliente via chat e e-mail.</li>
+                        <li>Operação de plataformas de e-commerce e gestão de pedidos online.</li>
+                    </ul>
+                </article>
+
+                <article class="card timeline-item">
+                    <div class="timeline-header">
+                        <h3>Assistente Administrativo Bancário (Aprendiz)</h3>
+                        <span class="timeline-company">Caixa Econômica Federal · 02/2022 – 12/2022</span>
+                    </div>
+                    <ul>
+                        <li>Suporte administrativo a clientes PJ e organização de documentos.</li>
+                        <li>Uso de sistemas bancários seguros e procedimentos internos.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="section" id="habilidades">
+            <h2>Competências Técnicas</h2>
+            <div class="card skills-card">
+                <h3>Infraestrutura &amp; Redes</h3>
+                <div class="skills-badges">
+                    <span class="badge">Montagem de Desktops</span>
+                    <span class="badge">Notebooks &amp; Celulares</span>
+                    <span class="badge">Windows</span>
+                    <span class="badge">Linux</span>
+                    <span class="badge">Cabeamento</span>
+                    <span class="badge">Diagnóstico de rede</span>
+                </div>
+
+                <h3>Desenvolvimento &amp; Programação</h3>
+                <div class="skills-badges">
+                    <span class="badge">Python (Back-end)</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">Java</span>
+                    <span class="badge">C++</span>
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                </div>
+
+                <h3>Cloud, Sistemas &amp; Dados</h3>
+                <div class="skills-badges">
+                    <span class="badge">Microsoft 365</span>
+                    <span class="badge">Active Directory</span>
+                    <span class="badge">Windows Server</span>
+                    <span class="badge">SQL (Fundação Bradesco)</span>
+                    <span class="badge">Conceitos de IA</span>
+                    <span class="badge">AZ-204 (em estudo)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- IDIOMAS -->
+        <section class="section">
+            <h2>Idiomas</h2>
+            <div class="card">
+                <p><strong>Inglês:</strong> Nível Intermediário (Instituição: Macrobyte)</p>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="section" id="contato">
+            <h2>Contato</h2>
+            <div class="card contact-card">
+                <p>Está buscando alguém com perfil mão na massa, visão técnica e vontade de aprender?</p>
+                <p>Entre em contato comigo por e-mail, telefone ou redes profissionais:</p>
+                <ul>
+                    <li>E-mail: <a href="mailto:hadrianrafael82@gmail.com">hadrianrafael82@gmail.com</a></li>
+                    <li>Telefone/WhatsApp: <a href="tel:+5511961528370">(11) 9 1652-8370</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/hadrianrafael/" target="_blank" rel="noopener">linkedin.com/in/hadrianrafael</a></li>
+                    <li>GitHub: <a href="https://hadrianrafael.github.io/Hadrian-Rafael/" target="_blank" rel="noopener">Portfólio no GitHub Pages</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="ano-atual"></span> · Desenvolvido por Hadrian Rafael</p>
+    </footer>
+
+    <script>
+        // Atualiza ano automaticamente
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
