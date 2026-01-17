@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Projetos — Hadrian Rafael</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #050816;
+      --card-bg: rgba(15, 23, 42, 0.95);
+      --card-border: rgba(148, 163, 184, 0.4);
+      --primary: #4169e1;
+      --primary-soft: rgba(65, 105, 225, 0.18);
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --shadow-soft: 0 20px 45px rgba(15, 23, 42, 0.9);
+      --radius-lg: 20px;
+      --radius-full: 999px;
+      --transition: 0.25s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .topbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 18px;
+      background: radial-gradient(circle at top left, rgba(65, 105, 225, 0.7), rgba(15, 23, 42, 1));
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+    }
+
+    .top-links a {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    .top-links a span {
+      font-size: 16px;
+    }
+
+    .top-links a:hover {
+      color: var(--text-main);
+      transform: translateY(-1px);
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto 60px auto;
+      padding: 0 16px;
+    }
+
+    .page-title {
+      margin-bottom: 6px;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .page-title span {
+      font-size: 26px;
+    }
+
+    .page-subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 650px;
+    }
+
+    /* GRID DE PROJETOS */
+    .projects-grid {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      position: relative;
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 14px 18px;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      transform: translateY(0) translateZ(0);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: -80px;
+      background: radial-gradient(circle at top left, rgba(65, 105, 225, 0.25), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .project-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bfdbfe;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(129, 140, 248, 0.6);
+      margin-bottom: 10px;
+    }
+
+    .project-tag span {
+      font-size: 13px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .stack span {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .project-links a {
+      color: #93c5fd;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    .project-links a span {
+      font-size: 15px;
+    }
+
+    .project-links a:hover {
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .status-pill {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.12);
+      border: 1px solid rgba(22, 163, 74, 0.6);
+      color: #bbf7d0;
+    }
+
+    .status-pill.soon {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.7);
+      color: #fed7aa;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 28px 60px rgba(15, 23, 42, 0.95);
+      border-color: rgba(96, 165, 250, 0.9);
+    }
+
+    /* RODAPÉ / VOLTAR */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 28px;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color var(--transition), transform var(--transition);
+    }
+
+    .back-link span {
+      font-size: 16px;
+    }
+
+    .back-link:hover {
+      color: var(--text-main);
+      transform: translateX(-3px);
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        padding-inline: 14px;
+      }
+      .container {
+        margin-top: 32px;
+      }
+      .page-title {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="logo">HR</div>
+      <div class="top-links">
+        <a href="index.html">
+          <span>🏠</span> <span>Portfólio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+    <h1 class="page-title">
+      <span>📁</span> Meus Projetos
+    </h1>
+    <p class="page-subtitle">
+      Aqui você encontra alguns projetos que desenvolvi para praticar programação, explorar novas tecnologias
+      e fortalecer minha base como desenvolvedor. Em breve adicionarei muitos outros.
+    </p>
+
+    <section class="projects-grid">
+
+      <!-- PROJETO 1 -->
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-tag">
+            <span>💻</span> Projeto em destaque
+          </div>
+          <h3>Nome do Projeto 1</h3>
+          <p class="project-desc">
+            Breve explicação do que o projeto faz, qual problema ele resolve ou qual foi o objetivo do estudo.
+          </p>
+          <div class="stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">
+              <span>🔗</span> Ver repositório
+            </a>
+            <span class="status-pill">Concluído</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJETO 2 -->
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-tag">
+            <span>🧠</span> Estudo / Prática
+          </div>
+          <h3>Nome do Projeto 2</h3>
+          <p class="project-desc">
+            Descrição rápida do foco desse projeto (ex.: API em Python, automação, consumo de API externa, etc.).
+          </p>
+          <div class="stack">
+            <span>Python</span>
+            <span>Requests</span>
+            <span>APIs</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">
+              <span>🔗</span> Ver repositório
+            </a>
+            <span class="status-pill soon">Em evolução</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJETO 3 -->
+      <article class="project-card">
+        <div class="project-card-inner">
+          <div class="project-tag">
+            <span>🚀</span> Em breve
+          </div>
+          <h3>Projeto futuro</h3>
+          <p class="project-desc">
+            Espaço reservado para um próximo projeto importante (ex.: sistema completo, dashboard, IA, etc.).
+          </p>
+          <div class="stack">
+            <span>Em breve</span>
+          </div>
+          <div class="project-links">
+            <a href="#" onclick="return false;">
+              <span>⏳</span> Em breve
+            </a>
+            <span class="status-pill soon">Planejado</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <a class="back-link" href="index.html">
+      <span>←</span> Voltar para o portfólio
+    </a>
+  </main>
+
+</body>
+</html>
